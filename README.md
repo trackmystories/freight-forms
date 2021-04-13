@@ -1,4 +1,4 @@
-# Customer feedback form with SVG animations and firebase
+# Shipping, Cargo & Freight Form example with React and firebase.
 
 ##### Setup node modules
 
