@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Categories from "./screens/categories";
+import Freight from "./screens/freight";
+import HouseHoldItems from "./screens/household-items";
+import Moves from "./screens/moves";
+import Vehicles from "./screens/vehicles";
+import "./App.css";
+
+function FreightRouter() {
+  return (
+    <Router>
+      <Switch>
+        <div>
+          <Route path="/" component={Categories} exact />
+          <Route path="/vehicles" component={Vehicles} exact />
+          <Route path="/freight" component={Freight} exact />
+          <Route path="/moves" component={Moves} exact />
+          <Route path="/household-items" component={HouseHoldItems} exact />
+        </div>
+      </Switch>
+    </Router>
+  );
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <FreightRouter />;
 }
 
 export default App;
